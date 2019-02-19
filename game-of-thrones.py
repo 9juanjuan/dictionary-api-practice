@@ -1,5 +1,6 @@
 from characters import characters
-print(len(characters))
+import matplotlib.pyplot as plt
+
 jon_snow = {
         "url":"https://anapioficeandfire.com/api/characters/583",
         "name":"Jon Snow",
@@ -89,6 +90,28 @@ def find_targ():
     return counter
 print (find_targ())
 
+# Create a histogram of the houses
+# find each characters allegiance number
+# count the total number of allegiances for each house
+
+def hist():
+    house_tracker = {}
+    for character in characters:
+        if len(character["allegiances"]) < 1:
+            continue
+        # handle unallegianced characters
+        else:
+            url_parts = character["allegiances"][0].split('/')
+            house_number = url_parts[-1]
+            print (house_number)
+            if house_number in house_tracker.keys():
+                house_tracker[house_number] += 1
+            else:
+                 house_tracker[house_number] = 1
+    print (max(house_tracker.keys()))
+    # print (house_tracker)
+
+hist()
 
 
 
