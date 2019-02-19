@@ -1,4 +1,5 @@
 # Game of thrones api practice exercise
+* Using an API of ice and fire-----
 For each of these questions, write a function that returns the answer.
 
 * How many characters names start with "A"?
@@ -10,3 +11,4 @@ For each of these questions, write a function that returns the answer.
 * How many characters are *not* in the tv show?
 * Produce a list characters with the last name "Targaryen"
 * Create a histogram of the houses (it's the "allegiances" key)
+
