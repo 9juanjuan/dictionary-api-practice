@@ -74,6 +74,22 @@ def find_book_only_characters ():
 print('There are %s characters that are only in the books.' % find_book_only_characters())
 # 2008 characters not in TV series
 
+# iterate through characters
+# find their names
+# find their last name
+# make sure their last name is targaryen
+# add to count if so
+def find_targ():
+    counter = 0
+    for character in characters:
+        name_array = character["name"].split()
+        if name_array[-1] == "Targaryen":
+            counter += 1
+            print (character["name"])
+    return counter
+print (find_targ())
+
+
 
 
 
