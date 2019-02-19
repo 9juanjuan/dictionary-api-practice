@@ -61,6 +61,29 @@ jon_snow = {
 
 # print (counter)
 
+#lets assume that we have seen no titles yet
+
+most_titles = 0
+
+# visit each character and see if they have more than `most_titles`
+
+for person in characters:
+    num_titles = len(person['titles'])
+    if num_titles > most_titles:
+        most_titles = num_titles
+    # person_with_most_titles = person['name']
+
+for person in characters:
+    num_titles = len(person['titles'])
+    if num_titles == most_titles:
+       print ("%s has %d titles" % (person["name"], most_titles))
+
+print("nope that's it")
+
+# print ("%s has %d titles" % (person_with_most_titles, most_titles))
+
+
+
 def find_hot_pie():
     for character in characters:
         if character["name"] == "Hot Pie":
@@ -139,7 +162,7 @@ def hist():
     plt.bar(list(house_tracker.keys()), house_tracker.values(), color='g')
     plt.show()
 
-hist()
+# hist()
 
 # for character in characters:
 #     for character["titles"] in character:
