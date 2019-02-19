@@ -78,10 +78,19 @@ for person in characters:
     if num_titles == most_titles:
        print ("%s has %d titles" % (person["name"], most_titles))
 
-print("nope that's it")
+# who are the top 10 title holders
 
-# print ("%s has %d titles" % (person_with_most_titles, most_titles))
+# how do I sort a list of dictionaries based on the length of values?
 
+# what do I expect/ hope for?
+# [
+# {
+#   name: "Balon Greyjoy", titles ['.....7 things here']
+# },
+# {
+#   name: "Somebody Else", titles ['....6 titles here' ]
+# }
+# ]
 
 
 def find_hot_pie():
