@@ -2,6 +2,8 @@ import requests # makes API requests (this is a third-party module)
 import json # convert the API data into python dictionaries and arrays
 import time # module for working with timestamps
 
+# pylint: disable-all
+
 # variables for grabbing our data
 URL = "https://www.anapioficeandfire.com/api/characters?page=%d&pageSize=100"
 DELAY = 1
