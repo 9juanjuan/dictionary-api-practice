@@ -1,8 +1,45 @@
 from characters import characters
 print(len(characters))
-jon_snow = {"url":"https://anapioficeandfire.com/api/characters/583","name":"Jon Snow","gender":"Male","culture":"Northmen","born":"In 283 AC","died":"","titles":["Lord Commander of the Night's Watch"],"aliases":["Lord Snow","Ned Stark's Bastard","The Snow of Winterfell","The Crow-Come-Over","The 998th Lord Commander of the Night's Watch","The Bastard of Winterfell","The Black Bastard of the Wall","Lord Crow"],"father":"","mother":"","spouse":"","allegiances":["https://anapioficeandfire.com/api/houses/362"],"books":["https://anapioficeandfire.com/api/books/5"],"povBooks":["https://anapioficeandfire.com/api/books/1","https://anapioficeandfire.com/api/books/2","https://anapioficeandfire.com/api/books/3","https://anapioficeandfire.com/api/books/8"],"tvSeries":["Season 1","Season 2","Season 3","Season 4","Season 5","Season 6"],"playedBy":["Kit Harington"]}
+jon_snow = {
+        "url":"https://anapioficeandfire.com/api/characters/583",
+        "name":"Jon Snow",
+        "gender":"Male",
+        "culture":"Northmen",
+        "born":"In 283 AC",
+        "died":"",
+        "titles":["Lord Commander of the Night's Watch"],
+        "aliases":[
+                "Lord Snow",
+                "Ned Stark's Bastard",
+                "The Snow of Winterfell",
+                "The Crow-Come-Over",
+                "The 998th Lord Commander of the Night's Watch",
+                "The Bastard of Winterfell",
+                "The Black Bastard of the Wall",
+                "Lord Crow"
+                ],
+        "father":"",
+        "mother":"",
+        "spouse":"",
+        "allegiances":["https://anapioficeandfire.com/api/houses/362"],
+        "books":["https://anapioficeandfire.com/api/books/5"],
+        "povBooks":[
+                "https://anapioficeandfire.com/api/books/1",
+                "https://anapioficeandfire.com/api/books/2",
+                "https://anapioficeandfire.com/api/books/3",
+                "https://anapioficeandfire.com/api/books/8"
+                ],
+        "tvSeries":[
+                "Season 1",
+                "Season 2",
+                "Season 3",
+                "Season 4",
+                "Season 5",
+                "Season 6"
+                ],
+        "playedBy":["Kit Harington"]
+        }
 
-counter = 0
 # for character in characters:
 #     if (character["name"][0] == "A") and (character["name"] != ""):
 #             counter +=1
@@ -27,12 +64,15 @@ for character in characters:
     if character["name"]== "Hot Pie":
         print (character["playedBy"])
 
-for character in characters:
-    for series in character["tvSeries"]:
-        if len(series) == 0:
+def find_book_only_characters ():
+    counter = 0
+    for character in characters:
+        if len(character["tvSeries"]) == 1:
             counter += 1
-            #1927 characters not in TV series
-# print (counter)
+    return counter
+
+print('There are %s characters that are only in the books.' % find_book_only_characters())
+# 2008 characters not in TV series
 
 
 
